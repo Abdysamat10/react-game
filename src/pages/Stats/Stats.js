@@ -1,66 +1,58 @@
-import { Layout, Row, Card } from 'antd';
-import { Header } from '../../components/index';
+import { Row, Card } from 'antd';
+import { Wrapper } from '../../components/index';
 import { useSelector } from 'react-redux';
-
+import styles from './styles.module.scss';
 
 export const Stats = () => {
-    const username = useSelector((store) => store.user.username)
-    const played = useSelector((store) => store.stats.played)
-    const correct = useSelector((store) => store.stats.correct)
-    const wrong = useSelector((store) => store.stats.wrong)
-    const points = useSelector((store) => store.stats.points)
+    const username = useSelector((store) => store.user.username);
+    const { played, wrong, correct, points } = useSelector((state) => state.stats)
     return (
-        <Layout>
-            <Layout.Header>
-                <Header />
-            </Layout.Header>
-            <Layout.Content>
-                <Row
-                    justify='center'
-                    style={{ margin: '10px' }}
+        <Wrapper>
+            <Row
+                justify='center'
+                className={styles.row}
+            >
+                <Card
+                    title='Nickname'
+                    className={styles.card}
                 >
-                    <Card
-                        title='Nickname'
-                        style={{ width: 400 }}
-                    >
-                        {username}
-                    </Card>
-                </Row>
-                <Row
-                    justify='center'
-                    style={{ margin: '10px' }}
+                    {username}
+                </Card>
+            </Row>
+            <Row
+                justify='center'
+                className={styles.row}
+            >
+                <Card
+                    title='Кол-во сыгранных вопросов'
+                    className={styles.card}
                 >
-                    <Card
-                        title='Кол-во сыгранных вопросов'
-                        style={{ width: 400 }}
-                    >
-                        {played}
-                    </Card>
-                    <Card
-                        title='Кол-во верных ответов'
-                        style={{ width: 400 }}
-                    >
-                        {correct}
-                    </Card>
-                </Row>
-                <Row
-                    justify='center'
-                    style={{ margin: '10px' }}
+                    {played}
+                </Card>
+                <Card
+                    title='Кол-во верных ответов'
+                    className={styles.card}
                 >
-                    <Card
-                        title='Кол-во неверных ответов'
-                        style={{ width: 400 }}
-                    >
-                        {wrong}
-                    </Card>
-                    <Card
-                        title='Сумма баллов'
-                        style={{ width: 400 }}
-                    >
-                        {points}
-                    </Card>
-                </Row>
-            </Layout.Content>
-        </Layout>
+                    {correct}
+                </Card>
+            </Row>
+            <Row
+                justify='center'
+                className={styles.row}
+            >
+                <Card
+                    title='Кол-во неверных ответов'
+                    className={styles.card}
+                >
+                    {wrong}
+                </Card>
+                <Card
+                    title='Сумма баллов'
+                    className={styles.card}
+                >
+                    {points}
+                </Card>
+            </Row>
+        </Wrapper>
     );
 };

@@ -3,10 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 export const statsSlice = createSlice({
     name: 'stats',
     initialState: {
-        played: 1,
-        correct: 2,
-        wrong: 3,
-        points: 4,
+        played: 0,
+        correct: 0,
+        wrong: 0,
+        points: 0,
     },
     reducers: {
         stats: (state, action) => {
