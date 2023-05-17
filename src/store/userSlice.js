@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
     name: 'user',
     initialState: {
-        username: 'Изначальное значение',
+        username: localStorage.getItem('nickname')
     },
     reducers: {
         setUsername: (state, action) => {
