@@ -32,7 +32,7 @@ export const Row = (props) => {
             setShow(false);
             if (showNotification) {
                 notification.error({ message: 'Ответ неверный' });
-                setShowNotification(false)
+                setShowNotification(false);
                 dispatch(wrongAnswers());
             }
         }
