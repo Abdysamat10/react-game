@@ -7,13 +7,10 @@ export const statsSlice = createSlice({
         correct: 0,
         wrong: 0,
         points: 0,
-        // categories: {
-        //     // example - food: [{}, {}, {}, {}, {}],
-        // },
+
     },
     reducers: {
         stats: (state, action) => {
-            // state.stats = action.payload;
             state.played = action.payload.played;
             state.correct = action.payload.correct;
             state.wrong = action.payload.wrong;

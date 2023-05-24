@@ -14,7 +14,7 @@ export const Row = (props) => {
     const [show, setShow] = useState(false);
     const dispatch = useDispatch();
     const currentQuestion = useRef({});
-    const [timer, setTimer] = useState(5);
+    const [timer, setTimer] = useState(45);
     const [showNotification, setShowNotification] = useState(true);
 
     // TIMER
