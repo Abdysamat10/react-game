@@ -37,5 +37,10 @@ export const gameSlice = createSlice({
     },
 });
 
+// const i = [{id: 303, answer: 'Marvin Gardens', question: 'Not flowers but hotels & houses grow on this Monopoly board "garden"', value: 100, airdate: '1985-04-08T19:00:00.000Z',},
+// {id: 309, answer: "<i>A Child\\'s Garden of Verse</i>", question: "Robert Louis Stevenson's masterpiece of children's literature", value: 200, airdate: '1985-04-08T19:00:00.000Z',},
+// {id: 315, answer: '"Garden Party"', question: "'72 hit that summed up Rick Nelson's feelings about being considered only a rock 'n' roller", value: 300, airdate: '1985-04-08T19:00:00.000Z',},
+// {id: 100614, answer: 'a maze', question: "Get lost in Hampton Court Palace's one of these, f…by clipped hedges, that dates back to the 17th c.", value: 200, airdate: '2005-04-06T19:00:00.000Z',}]
+
 export const { updateCategories, updateCategory, hideQuestion } =
     gameSlice.actions;

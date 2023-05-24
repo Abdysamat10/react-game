@@ -3,6 +3,7 @@ import { Wrapper, Table } from '../../components';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateCategories, updateCategory } from '../../store/gameSlice';
 import { Spin } from 'antd';
+import styles from './styles.module.scss'
 
 export const Game = () => {
     const dispatch = useDispatch();
@@ -31,7 +32,7 @@ export const Game = () => {
         fetchCategories();
     }, []);
 
-    if (loading) return <Spin />;
+    if (loading) return <Spin className={styles.spin}/>;
 
     return (
         <Wrapper>
